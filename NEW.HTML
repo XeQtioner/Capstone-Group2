@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="html" class="new.html">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>    
+    <title>FBI Log In</title>
+    <link rel="icon" type="image" href="./images/nbi.jpeg">
+    <style>
+        * {
+            background-color: black;
+            color: rgb(255, 254, 253);
+        }
+        .container {
+            font-family: 'Courier New', Courier, monospace;
+            color: antiquewhite;
+            font-weight: bolder;
+            background-color: black;
+        }
+        .form {
+            background-color: black;
+        }
+       
+    </style>
+</head>
+<body>
+<div class="container bg-dark">
+
+        <div class="col bg-dark">
+            <form action="/action_page.php" style="background-color: rgb(0, 0, 0);">
+               <h3 style="text-align: center;"><b>NEW EVIDENCE ENTRY FORM</h3>
+    
+               <!--the most important query the case number-->
+    <div class="container" style="background-color: black;">
+        <div class="row">
+            <div class="mb-3 mt-3">
+            <label for="text" class="form-label" style="font-family: 'Courier New', Courier, monospace; font-weight: bolder;">Case Number:</label>
+            <input type="text" class="form-control" id="caseno" style="background-color: black; color: antiquewhite; font-family: 'Courier New', Courier, monospace; border-style: dashed;" placeholder="ABCD000-000000" name="caseno"></input>
+        </div>
+
+<!--evidence number--> 
+<div class="mb-3 mt-3">
+    <label for="enum" class="form-label">Evidence Number:</label>
+    <input type="text" class="form-control" id="enum" style="background-color: black; border-style: dashed; color: antiquewhite;" placeholder="0000-000XXX">
+    <label for="apen" class="form-label">Appendix:</label>
+    <input type="text" class="form-control" id="apen" style="background-color: black; border-style: dashed; color: antiquewhite;" placeholder="X" name="apen">
+
+
+
+</div>
+
+        <!--item name-->
+        <div class="mb-3">
+            <label for="itemname" class="form-label" style="font-family: 'Courier New', Courier, monospace; font-weight: bolder;">Item Name:</label>
+            <input type="text" class="form-control" id="item" style="font-family: 'Courier New', Courier, monospace; color: antiquewhite; border-style: dashed; background-color: black;" placeholder="Item Name" name="item"></input>
+        </div>
+<!--custodial date-->
+        <div class="mb-3 mt-3">
+            <label for="date" class="form-label" style="font-family: 'Courier New', Courier, monospace; font-weight: bolder; color: antiquewhite;">Date Custody</label>
+            <input type="date" class="form-control" id="dcus" style="font-family: 'Courier New', Courier, monospace; color: antiquewhite; background-color: black; border-style: dashed;" placeholder="MM/DD/YYYY" name="dcus">
+        </div>
+<!--Evidence condition upon the submission-->
+        <div class="mb-3 mt-3">
+            <label for="condition" class="form-label" style="font-family: 'Courier New', Courier, monospace; color: antiquewhite; font-weight: bolder;">State Conditions</label>
+            <select class="form-select form-select-m3" name="condition" id="condi" style="font-family: 'Courier New', Courier, monospace; color: antiquewhite; background-color: black; border-style: dashed;">
+                <option>100% Original Form</option>
+                <option>75% With Slight Deformities</option>
+                <option>50% with Deformities due to CS</option>
+                <option>25-1% Deformed</option>
+            </select>
+<!--selection if the evidence has a DNA-->
+            
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="dna" name="dnaradio" value="option3" checked>    
+                    <label class="form-check-label" for="radio1">With DNA</label>
+                </div>
+        
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="dna2" name="dnaradio" value="option4">    
+                        <label class="form-check-label" for="radio2">No DNA</label>
+                    </div>
+<!--Result paper of the DNA Matching-->    
+    <h6>Forensic DNA Analysis Result</h6> 
+    <input type="file" class="btn btn-dark">   
+    <div class="mb-3">
+        <label for="forensic" class="form-label">Forensic Report No:</label>
+        <input type="text" class="form-control" id="foren" style="background-color: black; border-style: dashed; color: antiquewhite;" placeholder="XXXX" name="foren">
+        <label for="expert" class="form-label">Forensic Officer:</label>
+        <input type="text" class="form-control" id="foff" style="background-color: black; border-style: dashed; color: antiquewhite;" placeholder="XXXXXXXXXXX" name="foff">
+    </div>           
+<!--arresting officer-->        
+<div class="mb-3 mt-3">
+    <label for="arresting" class="form-label"> Arresting Officer</label>
+    <select class="form-select form-select-m3" name="judge" id="" style="background-color: black; color: antiquewhite; border-style: dashed;">
+        <option>PCapt. Rodrigo Duterte</option>
+        <option>Gen. Oscar Albayalde</option>
+        <option>Gen. Ronald Dela Rosa</option>
+        <option>Gen. Robo Cop</option>
+    </select>
+<!--custodial name-->
+<div class="mb-3 mt-3">
+    <label for="custodian" class="form-label">Custodian</label>
+    <Input type="text" class="form-control" id="cust" style="background-color: black; color: antiquewhite; border-style: dashed;" placeholder="Custodian Detail" name="text"></Input>
+</div>
+
+        </div>
+    </div>
+</div>
+
+
+<!----another column for new entry-->  
+     <div class="container">
+
+     </div><div class="col-6">
+      
+        <div class="col">
+        <div class="form-check">
+            <input type="radio" class="form-check-input" id="court1" name="optradio" value="option1" checked>    
+            <label class="form-check-label" for="radio1">MTC</label>
+        </div>
+
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="court2" name="optradio" value="option2">    
+                <label class="form-check-label" for="radio2">RTC</label>
+            </div>
+
+            <div class="mb-3 mt-3">
+            <label for="branch" class="form-label">Branch Number</label>
+            <input type="text" class="form-control" id="branch" style="background-color: black; color: antiquewhite; border-style: dashed;" placeholder="000-X" name="text">
+        </div>
+        </div>
+<!--presiding judge-->
+        <div class="mb-3 mt-3">
+            <label for="judge" class="form-label"> Presiding Judge</label>
+            <select class="form-select form-select-m3" name="judge" style="background-color: black; color: antiquewhite; border-style: dashed;" id="#">
+                <option>Judge John Wick</option>
+                <option>Judge Percida Acosta</option>
+                <option>Judge Hukom Asuncion</option>
+                <option>Judge Tony Stark</option>
+            </select>
+        </div>
+
+        <h6>Upload Ballistics / Images / Evidences according to angle</h6> 
+        Left<input type="file" class="btn-dark"> <br>
+        Right<input type="file" class="btn-dark"> <br>
+        Top<input type="file" class="btn-dark"> <br>
+        Front<input type="file" class="btn-dark"> <br>
+        Rear<input type="file" class="btn-dark"> <br>
+        <p>Additional Description: [kindly be discreet and certain]</p>
+        <textarea name="message" id="message" cols="50" rows="5"></textarea>
+
+    
+    </div>
+</div>
+</div>
+</div>
+</form>
+
+<div class="d-grid gap-2">
+<button class="btn btn-dark" style="font-family: 'Courier New', Courier, monospace; font-weight: bolder; text-align: center;"><a href="database.html">Back</button></a>
+<button type="submit" class="btn btn-dark" style="font-family: 'Courier New', Courier, monospace; font-weight: bolder; text-align: center;">Enter</button>
+</div>
+
+</body>
+</html>
